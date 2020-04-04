@@ -1,18 +1,21 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Xml;
 using ViniciusStore.Domain.StoreContext.ValueObjects;
 
 namespace ViniciusStore.Domain.StoreContext.Entities {
     public class Customer {
+
+        private readonly IList<Address> _addresses;
         public Customer(
             Document document,
             Email email,
-            string phone
+            Phone phone
         ) {
             Document = document;
             Email = email;
             Phone = phone;
-            Addresses = new List<Address>();
+            _addresses = new List<Address>();
         }
 
         public Name Name { get; set; }
@@ -21,9 +24,14 @@ namespace ViniciusStore.Domain.StoreContext.Entities {
 
         public Email Email { get; private set; }
 
-        public string Phone { get; private set; }
+        public Phone Phone { get; private set; }
 
-        public IReadOnlyCollection<Address> Addresses { get; private set; }
+        public IReadOnlyCollection<Address> Addresses => _addresses.ToArray();
+
+        public void AddAddress(Address address) {
+            //TODO - Validar o endereço..
+            _addresses.Add(address);
+        }
 
         public override string ToString() {
             return Name.ToString();

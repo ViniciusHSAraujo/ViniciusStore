@@ -8,10 +8,12 @@ namespace ViniciusStore.Domain.StoreContext.Entities {
 
         private readonly IList<Address> _addresses;
         public Customer(
+            Name name,
             Document document,
             Email email,
             Phone phone
         ) {
+            Name = name;
             Document = document;
             Email = email;
             Phone = phone;

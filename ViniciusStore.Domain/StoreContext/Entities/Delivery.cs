@@ -23,7 +23,7 @@ namespace ViniciusStore.Domain.StoreContext.Entities {
 
         public void Cancel() {
             //Se o status já estiver como entregue, não pode cancelar.
-            Status = EDeliveryStatus.Canceled
+            Status = EDeliveryStatus.Canceled;
         }
     }
 }

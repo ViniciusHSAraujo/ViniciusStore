@@ -8,4 +8,9 @@
     <PackageReference Include="Flunt" Version="1.0.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="StoreContext\Commands\CustomerCommands\Outputs" />
+    <Folder Include="StoreContext\Commands\OrderCommands\Outputs" />
+  </ItemGroup>
+
 </Project>

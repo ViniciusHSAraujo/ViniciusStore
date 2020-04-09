@@ -11,6 +11,7 @@
   <ItemGroup>
     <Folder Include="StoreContext\Commands\CustomerCommands\Outputs" />
     <Folder Include="StoreContext\Commands\OrderCommands\Outputs" />
+    <Folder Include="StoreContext\Handlers" />
   </ItemGroup>
 
   <ItemGroup>

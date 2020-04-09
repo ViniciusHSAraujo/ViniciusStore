@@ -17,9 +17,13 @@ namespace ViniciusStore.Domain.StoreContext.Commands.CustomerCommands.Inputs {
                 .HasMinLen(LastName, 3, "LastName", "O nome deve conter no mínimo 3 caracteres.")
                 .HasMaxLen(LastName, 40, "LastName", "O nome deve conter no máximo 40 caracteres.")
                 .IsEmail(Email, "Address", "O e-mail é inválido.")
-                .HasLen(Document, 11, "Document", "CPF inválido.")
+                .HasLen(CleanDocument(Document), 11, "Document", "CPF inválido.")
             );
             return Valid;
+        }
+
+        private string CleanDocument(string cpf) {
+            return cpf.Replace(".", "").Replace("-", "").Trim();
         }
     }
 }

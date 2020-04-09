@@ -13,4 +13,8 @@
     <Folder Include="StoreContext\Commands\OrderCommands\Outputs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ViniciusStore.Shared\ViniciusStore.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

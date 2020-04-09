@@ -1,9 +1,9 @@
 ﻿using System;
+using Flunt.Notifications;
 using ViniciusStore.Domain.StoreContext.Enums;
 
 namespace ViniciusStore.Domain.StoreContext.Entities {
-    public class Delivery {
-        
+    public class Delivery : Notifiable {
         public Delivery(DateTime estimatedDeliveryTime) {
             CreateDate = DateTime.Now;
             EstimatedDeliveryTime = estimatedDeliveryTime;

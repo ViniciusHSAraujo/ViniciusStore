@@ -7,7 +7,7 @@ using ViniciusStore.Domain.StoreContext.Entities;
 using ViniciusStore.Shared.Commands;
 
 namespace ViniciusStore.Domain.StoreContext.Commands.OrderCommands.Inputs {
-    public class PlaceOrderCommand: Notifiable, ICommand {
+    public class PlaceOrderCommand : Notifiable, ICommand {
         public Guid Customer { get; set; }
         public IList<OrderItemCommand> OrderItens { get; set; }
 
@@ -20,7 +20,8 @@ namespace ViniciusStore.Domain.StoreContext.Commands.OrderCommands.Inputs {
                 .HasLen(Customer.ToString(), 36, "Customer", "Identificador do Cliente inválido.")
                 .IsGreaterThan(OrderItens.Count, 0, "Items", "Nenhum item do pedido encontrado.")
             );
-            return Valid;        }
+            return Valid;
+        }
     }
 
 

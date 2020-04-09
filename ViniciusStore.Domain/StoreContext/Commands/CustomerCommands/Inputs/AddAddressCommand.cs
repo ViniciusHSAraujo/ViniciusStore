@@ -1,8 +1,11 @@
 ﻿using System;
+using Flunt.Notifications;
+using Flunt.Validations;
 using ViniciusStore.Domain.StoreContext.Enums;
+using ViniciusStore.Shared.Commands;
 
 namespace ViniciusStore.Domain.StoreContext.Commands.CustomerCommands.Inputs {
-    public class AddAddressCommand {
+    public class AddAddressCommand: Notifiable, ICommand {
         public Guid Id { get; set; }
         public string Street { get; set; }
 
@@ -21,5 +24,8 @@ namespace ViniciusStore.Domain.StoreContext.Commands.CustomerCommands.Inputs {
         public string ZipCode { get; set; }
 
         public EAddressType Type { get; set; }
+        public bool Validate() {
+            return Valid;     
+        }
     }
 }

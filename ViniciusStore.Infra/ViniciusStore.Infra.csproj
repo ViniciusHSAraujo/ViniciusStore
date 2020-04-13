@@ -10,10 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="StoreContext\Repositoryies" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\ViniciusStore.Domain\ViniciusStore.Domain.csproj" />
     <ProjectReference Include="..\ViniciusStore.Shared\ViniciusStore.Shared.csproj" />
   </ItemGroup>
 

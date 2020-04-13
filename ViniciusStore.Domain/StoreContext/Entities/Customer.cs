@@ -3,9 +3,10 @@ using System.Linq;
 using System.Xml;
 using Flunt.Notifications;
 using ViniciusStore.Domain.StoreContext.ValueObjects;
+using ViniciusStore.Shared.Entities;
 
 namespace ViniciusStore.Domain.StoreContext.Entities {
-    public class Customer : Notifiable {
+    public class Customer : Entity {
         private readonly IList<Address> _addresses;
 
         public Customer(

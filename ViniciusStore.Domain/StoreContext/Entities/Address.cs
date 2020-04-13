@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 using ViniciusStore.Domain.StoreContext.Enums;
+using ViniciusStore.Shared.Entities;
 
 namespace ViniciusStore.Domain.StoreContext.Entities {
-    public class Address {
-        public Address(string street, string number, string complement, string district, string city, string state, string country, string zipCode, EAddressType type) {
+    public class Address : Entity {
+        public Address(string street, string number, string complement, string district, string city, string state,
+            string country, string zipCode, EAddressType type) {
             Street = street;
             Number = number;
             Complement = complement;

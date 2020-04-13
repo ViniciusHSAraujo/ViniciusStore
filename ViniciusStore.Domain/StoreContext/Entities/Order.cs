@@ -5,9 +5,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using ViniciusStore.Domain.StoreContext.Enums;
+using ViniciusStore.Shared.Entities;
 
 namespace ViniciusStore.Domain.StoreContext.Entities {
-    public class Order : Notifiable {
+    public class Order : Entity {
         private readonly IList<OrderItem> _items;
         private readonly IList<Delivery> _deliveries;
 
@@ -59,13 +60,14 @@ namespace ViniciusStore.Domain.StoreContext.Entities {
         public void Ship() {
             //Cada 5 produtos, é uma entrega diferente.
             var deliveries = new List<Delivery>();
-             deliveries.Add(new Delivery(DateTime.Now.AddDays(5)));
+            deliveries.Add(new Delivery(DateTime.Now.AddDays(5)));
             var count = 0;
             foreach (var item in _items) {
                 if (count == 5) {
                     count = 0;
                     deliveries.Add(new Delivery(DateTime.Now.AddDays(5)));
                 }
+
                 count++;
             }
 

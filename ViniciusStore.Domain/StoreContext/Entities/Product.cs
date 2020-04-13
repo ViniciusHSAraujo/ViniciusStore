@@ -1,7 +1,8 @@
 ﻿using System.Reflection;
+using ViniciusStore.Shared.Entities;
 
 namespace ViniciusStore.Domain.StoreContext.Entities {
-    public class Product {
+    public class Product : Entity {
         public Product(string title, string description, string image, decimal price, decimal quantity) {
             Title = title;
             Description = description;

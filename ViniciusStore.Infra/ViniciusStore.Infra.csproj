@@ -4,4 +4,17 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.35" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="StoreContext\Repositoryies" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ViniciusStore.Shared\ViniciusStore.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

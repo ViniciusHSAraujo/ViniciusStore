@@ -13,10 +13,10 @@ namespace ViniciusStore.Domain.StoreContext.Handlers {
         Notifiable,
         ICommandHandler<CreateCustomerCommand>,
         ICommandHandler<AddAddressCommand> {
-        private readonly ICustomeRepository _customeRepository;
+        private readonly ICustomerRepository _customeRepository;
         private readonly IEmailService _emailService;
 
-        public CustomerHandler(ICustomeRepository customeRepository, IEmailService emailService) {
+        public CustomerHandler(ICustomerRepository customeRepository, IEmailService emailService) {
             _customeRepository = customeRepository;
             _emailService = emailService;
         }

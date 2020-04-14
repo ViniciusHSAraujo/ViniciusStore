@@ -2,7 +2,7 @@
 using ViniciusStore.Domain.StoreContext.Repositories;
 
 namespace ViniciusStore.Tests.Mocks {
-    public class FakeCustomerRepository : ICustomeRepository {
+    public class FakeCustomerRepository : ICustomerRepository {
         public bool CheckDocument(string document) {
             return false;
         }

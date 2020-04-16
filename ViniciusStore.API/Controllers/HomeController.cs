@@ -5,8 +5,8 @@ using ViniciusStore.Domain.StoreContext.Entities;
 namespace ViniciusStore.API.Controllers {
     public class HomeController : Controller {
 
-        public List<Customer> Get() {
-            
+        public dynamic Index() {
+            return new { version = "1.0.0" };
         }
     }
 }
